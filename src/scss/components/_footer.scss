@@ -1,0 +1,39 @@
+@use 'constants' as *;
+
+.footer {
+  &__content {
+    border-top: 1.5px solid #222;
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  p {
+    font-size: 13px;
+    line-height: 24px;
+    @extend %Montserrat-Regular;
+    color: #222;
+  }
+  span,
+  a {
+    @extend %Gilroy-ExtraBold;
+    color: #222;
+    display: inline-block;
+  }
+}
+.copyright {
+  a {
+    @extend %Montserrat-Regular;
+    color: #222;
+  }
+}
+@media screen and (max-width: 660px) {
+  .footer {
+    &__content {
+      padding: 20px 0;
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+    }
+  }
+}

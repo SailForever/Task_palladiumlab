@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title": "Task_palladiumlab",
+})
+
+<body>
+    @@include('html/header.html',{})
+    <main class="main">
+      <section class="hero">
+        <div class="hero__bg"></div>
+        <div class="container"> 
+          <div class="hero__content">
+            <h1 data-initialTitle="&lt;span&gt;Ремонт&lt;/span&gt; и &lt;span&gt;дизайн&lt;/span&gt;"><strong><span>Ремонт</span> и <span>дизайн</span></strong> <br> в Москве и Московской области</h1><a class="primary-btn" href="#contact">Оставить заявку</a>
+          </div>
+        </div>
+        <div class="hero__bottom"> </div>
+        <div class="tabs">
+          <div class="tabs__item" data-title="Услуги по ремонту" data-bg="@img/main1.png">
+            <div class="tabs__btn"> <strong>Услуги по ремонту</strong>
+              <div class="tabs__hidden">
+                <p>С другой стороны реализация намеченных плановых заданий требуют от нас анализа.</p><a class="arrow-btn" href=""></a>
+              </div>
+            </div>
+          </div>
+          <div class="tabs__item" data-title="Виды работ по ремонту" data-bg="@img/main2.png">
+            <div class="tabs__btn"> <strong>Виды работ</strong>
+              <div class="tabs__hidden">
+                <p>С другой стороны реализация намеченных плановых заданий требуют от нас анализа.</p><a class="arrow-btn" href=""></a>
+              </div>
+            </div>
+          </div>
+          <div class="tabs__item" data-title="Дизайн интерьера" data-bg="@img/main3.png">
+            <div class="tabs__btn"> <strong>Дизайн интерьера</strong>
+              <div class="tabs__hidden">
+                <p>С другой стороны реализация намеченных плановых заданий требуют от нас анализа.</p><a class="arrow-btn" href=""></a>
+              </div>
+            </div>
+          </div>
+          <div class="tabs__item" data-title="Ремонт помещений" data-bg="@img/main4.png">
+            <div class="tabs__btn"> <strong>Ремонт помещений</strong>
+              <div class="tabs__hidden">
+                <p>С другой стороны реализация намеченных плановых заданий требуют от нас анализа.</p><a class="arrow-btn" href=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cases">
+        <div class="container" id="cases"> 
+          <h2>Примеры <span>выполненных</span> работ</h2>
+          <div class="cases__wrapper">
+            <a class="cases__item case-1" href="">
+              <p class="cases__title">Новостройка</p>
+            </a>
+            <a class="cases__item case-2" href="">
+              <p class="cases__title">Новостройка</p>
+            </a>
+            <a class="cases__item case-3" href="">
+              <p class="cases__title">Вторичка</p>
+            </a>
+            <a class="cases__item case-4" href="">
+              <p class="cases__title">Вторичка</p>
+            </a>
+            <a class="cases__item case-5" href="">
+              <p class="cases__title">Новостройка</p>
+            </a>
+            <a class="cases__item case-6" href="">
+              <p class="cases__title">Вторичка</p>
+            </a>
+            <a class="cases__item case-7" href="">
+              <p class="cases__title">Вторичка</p>
+            </a>
+            <a class="cases__item case-8" href="">
+              <p class="cases__title">Новостройка</p>
+            </a>
+          </div><a class="primary-btn">Все проекты</a>
+          </div>
+      </section>
+      <section class="contacts"> 
+        <div class="container" id="contact"> 
+          <h2>Связаться <span>с нами</span></h2>
+          <div class="contacts__wrapper">
+            <div class="contacts__col"> 
+              <div class="contacts__item"> 
+                <label>Офис</label>
+                <div class="contacts__text">Москва, ул. Уличная, д. 1, оф. 1</div>
+              </div>
+              <div class="contacts__item"> 
+                <label>E-mail</label><a class="contacts__text" href="mailto: company@company.ru">company@company.ru</a>
+              </div>
+              <div class="contacts__item"> 
+                <label>Социальные сети</label>
+                <div class="socials"> <a class="socials__link" href=""></a><a class="socials__link" href=""> </a><a class="socials__link" href=""> </a></div>
+              </div>
+            </div>
+            <div class="contacts__col"> 
+              <div class="contacts__item"> 
+                <label>Режим работы</label>
+                <div class="contacts__text">Пн-Вт: 10<sup>00</sup> — 19<sup>00</sup>; Сб-Вс: 10<sup>00</sup> — 15<sup>00</sup></div>
+              </div>
+              <div class="contacts__item"> 
+                <label>Телефон</label><a class="contacts__text" href="tel:8 (800) 900-00-00">8 (800) 900-00-00</a>
+              </div>
+            </div>
+            <div class="contacts__col">
+              <label>Остались вопросы?</label>
+              <form class="form" id="feedback-form">
+                <div class="custom-input">
+                  <input class="input-item" type="text" name="name" id="name"><span>Ваше имя</span>
+                </div>
+                <div class="custom-input">
+                  <input class="input-item" type="text" name="tel" id="tel"><span>Телефон / E-mail</span>
+                </div>
+                <div class="custom-input custom-input_icon">
+                  <input class="input-item" type="text" name="message"><span>Ваше сообщение</span>
+                </div>
+                <div class="advice">Нажимая на кнопку «Получить консультацию», вы соглашаетесь<br> на <a href="">обработку персональных данных</a></div>
+                <button class="primary-btn" type="submit">Получить консультацию</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/footer.html',{})
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>

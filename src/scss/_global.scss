@@ -1,0 +1,249 @@
+@use 'constants' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 400;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  color: #222222;
+  &.overflow {
+    overflow: hidden;
+  }
+}
+
+html,
+body {
+  min-height: 100%;
+  height: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+svg {
+  width: 100%;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  font-size: inherit;
+  display: block;
+}
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 30px;
+  height: 100%;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 64px;
+  line-height: 72px;
+  @extend %Gilroy-ExtraBold;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  max-width: 981px;
+  text-align: center;
+  margin: 0 auto;
+  strong {
+    color: #fff;
+    span {
+      color: #222;
+      -webkit-text-stroke-width: unset;
+      -webkit-text-stroke-color: unset;
+    }
+  }
+}
+h2 {
+  font-size: 32px;
+  line-height: 40px;
+  @extend %Gilroy-ExtraBold;
+  color: #222;
+  margin: 0 auto;
+  position: relative;
+  text-align: left;
+  span {
+    color: transparent;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+  }
+  &::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 40px;
+    background: #222;
+    position: absolute;
+    left: -80px;
+    top: 18px;
+  }
+}
+.primary-btn {
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid rgba(34, 34, 34, 0.3);
+  font-size: 14px;
+  line-height: 18px;
+  @extend %Gilroy-ExtraBold;
+  color: #222;
+  padding: 10px 48px;
+  width: fit-content;
+  position: relative;
+  transition: all 300ms ease;
+  &::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 24px;
+    background: #222;
+    position: absolute;
+    left: -12px;
+    top: 18px;
+    transition: all 300ms ease;
+  }
+  &:hover:before {
+    left: -16px;
+  }
+}
+.arrow-btn {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-image: url(@img/svgSprite/icons.svg#arrow);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15px;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+.custom-input {
+  @extend %Montserrat-Regular;
+  font-size: 13px;
+  line-height: 24px;
+  border-bottom: 1px solid #ebebeb;
+  position: relative;
+  &:has(.error){
+    border-color: red;
+  }
+  &:has(.focus) span {
+    top: 7px;
+    font-size: 9px;
+    line-height: 12px;
+  }
+  & + & {
+    margin: 24px 0 0 0;
+  }
+  span {
+    display: block;
+    position: absolute;
+    top: 18px;
+    @extend %Montserrat-Medium;
+    font-size: 13px;
+    line-height: 24px;
+    color: #222;
+    transition: all 300ms ease;
+    z-index: 1;
+    pointer-events: none;
+  }
+  input {
+    width: 100%;
+    color: #909090;
+    position: relative;
+    z-index: 1;
+    padding: 26px 0 4px 0;
+    &:focus {
+      color: #222;
+    }
+  }
+
+  &_icon {
+    background-image: url(@img/svgSprite/icons.svg#clip);
+    background-position: 97% 75%;
+    background-repeat: no-repeat;
+    background-size: 18px;
+  }
+}
+.advice {
+  margin: 28px 0 30px 0;
+  font-size: 9px;
+  line-height: 12px;
+  width: 100%;
+  color: #909090;
+  @extend %Montserrat-Medium;
+  font-weight: 500;
+  a {
+    display: inline-block;
+    color: #222;
+    border-bottom: 1px dotted #222;
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  h2 {
+    width: fit-content;
+    margin: 0;
+    &::before {
+      left: unset;
+      right: -80px;
+      top: 18px;
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 50px;
+    line-height: 120%;
+    max-width: 100%;
+  }
+  .container {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 660px) {
+  h1 {
+    font-size: 40px;
+  }
+  .container {
+    padding: 0 15px;
+  }
+  h2 {
+    width: fit-content;
+    margin: 0;
+    font-size: 30px;
+    &::before {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 380px) {
+  h1 {
+    font-size: 34px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+}
